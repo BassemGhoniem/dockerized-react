@@ -6,4 +6,4 @@ before_install:
   - docker build -t bassemghoniem/dockerized-react -f Dockerfile.dev .
 
 script:
-  - docker run bassemghoniem/dockerized-react npm run test -- --coverage
+  - docker run -e CI=true bassemghoniem/dockerized-react npm run test
